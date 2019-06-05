@@ -165,6 +165,24 @@ function handleText(message, replyToken, source) {
           },
         }
       )
+    case '!type':
+      return client.replyMessage(
+        replyToken,
+        {
+          type: 'template',
+          altText: 'buttons Template',
+          template: {
+            type: 'buttons',
+            thumbnailImageUrl: 'https://scontent.fbkk3-1.fna.fbcdn.net/v/t31.0-8/fr/cp0/e15/q65/28514579_295554550974775_6611334977932485671_o.jpg?_nc_cat=101&efg=eyJpIjoidCJ9&_nc_eui2=AeG64ge1eBjGhYnuLRRpekTmNeUeoNG7wN5Io7tfkcZm_I3d8Ch2K35r7oAYXTjA-9UMQE6ZOREjkFNXIMT_8JGn0KcYJVHOfoNJOVJ5k_-HefVXWAWgdZL7UQcx6WbdDWg&_nc_ht=scontent.fbkk3-1.fna&oh=5e5bbe50e324e8520dec1dfd672567c1&oe=5CA8ECCA',
+            title: '[ Magicavi ]',
+            text: 'ลองกดสิ๊',
+            actions: [
+              { label: '~~', type: 'message', text: '>!' },
+              { label: '~~', type: 'message', text: '>>!' },
+            ],
+          },
+        }
+      )
     case '!youtube':
       return client.replyMessage(
         replyToken,
